@@ -1,0 +1,232 @@
+# Laravel
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+
+# Laravel Storage
+/storage/app/public/*
+!/storage/app/public/.gitkeep
+/storage/framework/cache/*
+!/storage/framework/cache/.gitkeep
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitkeep
+/storage/framework/testing/*
+!/storage/framework/testing/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitkeep
+/storage/logs/*
+!/storage/logs/.gitkeep
+
+# Laravel Bootstrap
+/bootstrap/cache/*
+!/bootstrap/cache/.gitkeep
+
+# Laravel Config
+/config/*.cache
+
+# Composer
+composer.phar
+/vendor/
+
+# NPM/Yarn
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build outputs
+/public/build/
+/public/mix-manifest.json
+/public/vite-manifest.json
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+*.log.*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+# Laravel Sail
+docker-compose.override.yml
+
+# Laravel Telescope
+/storage/telescope/*
+!/storage/telescope/.gitkeep
+
+# Laravel Horizon
+/storage/horizon/*
+!/storage/horizon/.gitkeep
+
+# Laravel Sanctum
+/storage/oauth-public.key
+/storage/oauth-private.key
+
+# Testing
+.phpunit.cache/
+.phpunit.result.cache
+coverage.xml
+coverage.html
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+*.tmp
+*.temp
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+*.csr
+
+# Application specific
+/storage/app/uploads/*
+!/storage/app/uploads/.gitkeep
+/storage/app/exports/*
+!/storage/app/exports/.gitkeep
+/storage/app/imports/*
+!/storage/app/imports/.gitkeep
+
+# Cache and compiled files
+*.cache
+*.compiled
+*.min.js
+*.min.css
+
+# Package lock files (optional - uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Local configuration files
+config/local.php
+config/database.local.php
+
+# Backup and archive files
+*.tar.gz
+*.zip
+*.rar
+*.7z
+
+# Editor configuration (optional - uncomment if you want to ignore them)
+# .editorconfig
+# .prettierrc
+# .eslintrc.js
+# .eslintrc.json
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes
+*.kubeconfig
+
+# Local development
+.local/
+local/
