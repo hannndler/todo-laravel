@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->morphs('tokenable');
             $table->string('name');
-            $table->string('type');
-            $table->string('hash', 64)->unique();
+            $table->string('type')->nullable();
+            $table->string('token', 64);
             $table->text('abilities')->nullable();
             $table->timestamp('last_used_at')->nullable();
             $table->timestamp('expires_at')->nullable();
