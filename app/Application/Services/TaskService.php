@@ -245,15 +245,25 @@ class TaskService
             });
         }
 
+        $total = $query->count();
+        $completed = (clone $query)->where('status', TaskStatus::COMPLETED)->count();
+        $pending = (clone $query)->where('status', TaskStatus::PENDING)->count();
+        $inProgress = (clone $query)->where('status', TaskStatus::IN_PROGRESS)->count();
+        $cancelled = (clone $query)->where('status', TaskStatus::CANCELLED)->count();
+        $overdue = (clone $query)->where('due_date', '<', now())
+            ->where('status', '!=', TaskStatus::COMPLETED)
+            ->count();
+
+        $completionRate = $total > 0 ? round(($completed / $total) * 100, 1) : 0;
+
         return [
-            'total' => $query->count(),
-            'pending' => (clone $query)->where('status', TaskStatus::PENDING)->count(),
-            'in_progress' => (clone $query)->where('status', TaskStatus::IN_PROGRESS)->count(),
-            'completed' => (clone $query)->where('status', TaskStatus::COMPLETED)->count(),
-            'cancelled' => (clone $query)->where('status', TaskStatus::CANCELLED)->count(),
-            'overdue' => (clone $query)->where('due_date', '<', now())
-                ->where('status', '!=', TaskStatus::COMPLETED)
-                ->count(),
+            'total' => $total,
+            'pending' => $pending,
+            'in_progress' => $inProgress,
+            'completed' => $completed,
+            'cancelled' => $cancelled,
+            'overdue' => $overdue,
+            'completion_rate' => $completionRate,
         ];
     }
 
